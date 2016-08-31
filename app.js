@@ -1,7 +1,7 @@
 "use strict";
 var express = require( 'express' );
 var http = require( 'http' );
-var favicon = require( 'serve-favicon' );
+// var favicon = require( 'serve-favicon' );
 var path = require( 'path' );
 var logger = require( 'morgan' );
 var pg = require( 'pg' );
@@ -21,7 +21,7 @@ var auth = require( './routes/auth' );
 var bcrypt = require( 'bcrypt' );
 var app = express();
 //
-// require( 'dotenv' ).load();
+require( 'dotenv' ).load();
 require( 'locus' );
 //
 app.set( 'view engine', 'ejs' );
