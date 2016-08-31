@@ -3,21 +3,38 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Erikang20/giveme-wine.git"
+    "test": "NODE_ENV=test mocha",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Erikang20/giveme-wine/issues"
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-alpha.1",
+    "dotenv": "^2.0.0",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "jquery": "^3.1.0",
+    "knex": "^0.11.10",
+    "locus": "^1.2.0",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "passport-oauth": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "pg": "^6.1.0",
+    "serve-favicon": "^2.3.0",
+    "typescript": "^1.8.10"
   },
-  "homepage": "https://github.com/Erikang20/giveme-wine#readme"
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "supertest": "^2.0.0"
+  }
 }
