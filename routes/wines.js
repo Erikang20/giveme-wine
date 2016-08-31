@@ -1,0 +1,24 @@
+"use strict";
+var express = require( 'express' );
+var router = express.Router();
+var knex = require( '../db/knex' );
+var methodOverride = require( 'method-override' );
+var bodyParser = require( 'body-parser' );
+
+/* GET home page. */
+router.get( '/', function ( req, res, next ) {
+    knex( 'wines' ).select().then( function ( result, err ) {
+        res.render( 'index' );
+    } );
+} );
+
+router.get( '/', function ( req, res, next ) {
+    res.cookie( 'views', parseInt( req.cookies.views || 0 ) + 1 );
+
+    res.render( 'index', {
+        title: 'wine',
+        views: ( req.cookies.views || 0 )
+    } );
+} );
+
+module.exports = router;
